@@ -1,0 +1,241 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Polish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PLK)
+#ifdef _WIN32
+LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_MAIN DIALOGEX 0, 0, 288, 180
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Mem scan"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT_PROCESS_ID,64,7,70,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Process ID:",IDC_STATIC,21,10,38,8
+    GROUPBOX        "Variable type",IDC_STATIC,7,25,128,58
+    EDITTEXT        IDC_EDIT_VALUE1,57,84,77,14,ES_AUTOHSCROLL
+    CONTROL         "UInt 32",IDC_RADIO_INT32,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,16,41,39,10
+    CONTROL         "UInt 64",IDC_RADIO_INT64,"Button",BS_AUTORADIOBUTTON,16,
+                    54,39,10
+    CONTROL         "UInt 08",IDC_RADIO_INT08,"Button",BS_AUTORADIOBUTTON,16,
+                    67,39,10
+    CONTROL         "UInt 16",IDC_RADIO_INT16,"Button",BS_AUTORADIOBUTTON,70,
+                    67,39,10
+    CONTROL         "Float 4",IDC_RADIO_FLOAT4,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,70,41,37,10
+    CONTROL         "Float 8",IDC_RADIO_FLOAT8,"Button",BS_AUTORADIOBUTTON,
+                    70,54,37,10
+    PUSHBUTTON      "Scan",IDC_BUTTON_SCAN,35,134,50,14
+    PUSHBUTTON      "Check",IDC_BUTTON_CHECK,85,134,50,14
+    PUSHBUTTON      "Reset",IDC_BUTTON_RESET,35,148,50,14
+    LISTBOX         IDC_LIST_VALUES,140,7,141,166,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "Rescan",IDC_BUTTON_RESCAN,85,148,50,14
+    EDITTEXT        IDC_EDIT_VALUE2,57,100,77,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VALUE3,57,116,77,14,ES_AUTOHSCROLL
+    CONTROL         "=",IDC_CHECK_EQUAL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,86,20,10
+    CONTROL         ">",IDC_CHECK_GREATER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,102,20,10
+    CONTROL         "<",IDC_CHECK_LESS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    13,118,20,10
+END
+
+IDD_DIALOG_WAIT DIALOG DISCARDABLE  0, 0, 125, 62
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Please, wait ..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Operation in progress ...",IDC_STATIC,25,17,76,8
+    PUSHBUTTON      "Stop",IDC_BUTTON_STOP,35,33,50,14
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOG_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 173
+    END
+
+    IDD_DIALOG_WAIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 118
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Polish resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MEMSCAN             ICON    DISCARDABLE     "MemScan.ICO"
+IDI_SMALL               ICON    DISCARDABLE     "SMALL.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_MEMSCAN MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_MEMSCAN ACCELERATORS MOVEABLE PURE 
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  22, 17, 230, 75
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "System"
+BEGIN
+    ICON            IDI_MEMSCAN,IDC_MYICON,14,9,16,16
+    LTEXT           "MemScan Version 1.0",IDC_STATIC,49,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2008",IDC_STATIC,49,20,119,8
+    DEFPUSHBUTTON   "OK",IDOK,195,6,30,11,WS_GROUP
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""resource.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_APP_TITLE           "MemScan"
+    IDS_HELLO               "Hello World!"
+    IDC_MEMSCAN             "MEMSCAN"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
